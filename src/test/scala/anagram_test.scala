@@ -8,7 +8,6 @@ class AnagramSpecs extends FlatSpec with Matchers {
   }
 
   it should "detect simple anagrams" in {
-    pending
     val detector = new Anagram("ant")
     val anagrams = detector.matches(Seq("tan", "stand", "at"))
     anagrams should equal (Seq("tan"))

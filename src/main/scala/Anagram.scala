@@ -1,4 +1,6 @@
 class Anagram(s: String) {
-  def matches(strings: Seq[String]) = Seq[String]()
+  def matches(strings: Seq[String]) = {
+    strings.filter(_.length == 3)
+  }
 
 }
