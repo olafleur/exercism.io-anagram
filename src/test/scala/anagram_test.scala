@@ -20,14 +20,12 @@ class AnagramSpecs extends FlatSpec with Matchers {
   }
 
   it should "not confuse different duplicates" in {
-    pending
     val detector = new Anagram("galea")
     val anagrams = detector.matches(Seq("eagle"))
     anagrams should equal (Seq())
   }
 
   it should "not include identical words" in {
-    pending
     val detector = new Anagram("corn")
     val anagrams = detector.matches(Seq(
       "corn", "dark", "Corn", "rank", "CORN", "cron", "park"
