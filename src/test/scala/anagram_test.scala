@@ -58,7 +58,6 @@ class AnagramSpecs extends FlatSpec with Matchers {
   }
 
   it should "treat anagrams as case insensitive" in {
-    pending
     val detector = new Anagram("Orchestra")
     val anagrams = detector.matches(Seq(
       "cashregister", "Carthorse", "radishes"
