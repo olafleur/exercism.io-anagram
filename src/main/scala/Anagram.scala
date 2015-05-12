@@ -1,6 +1,14 @@
+import scala.collection.mutable.ListBuffer
+
 class Anagram(s: String) {
   def matches(strings: Seq[String]) = {
-    strings.filter(_.length == 3)
+    val listBuffer = ListBuffer[String]()
+    for(chaine <- strings) {
+      if(chaine.permutations.contains(s)) {
+        listBuffer.append(chaine)
+      }
+    }
+    listBuffer.toList
   }
 
 }

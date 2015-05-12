@@ -14,7 +14,6 @@ class AnagramSpecs extends FlatSpec with Matchers {
   }
 
   it should "detect multiple anagrams" in {
-    pending
     val detector = new Anagram("master")
     val anagrams = detector.matches(Seq("stream", "pigeon", "maters"))
     anagrams.sorted should equal (Seq("maters", "stream"))
