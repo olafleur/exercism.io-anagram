@@ -34,26 +34,22 @@ class AnagramSpecs extends FlatSpec with Matchers {
   }
 
   it should "elimitate anagrams with same checksum" in {
-    pending
     val detector = new Anagram("mass")
     detector.matches(Seq("last")) should equal (Seq())
   }
 
   it should "eliminate anagrams subsets" in {
-    pending
     val detector = new Anagram("good")
     detector.matches(Seq("dog", "goody")) should equal (Seq())
   }
 
   it should "detect anagrams" in {
-    pending
     val detector = new Anagram("listen")
     val anagrams = detector.matches(Seq("enlists", "google", "inlets", "banana"))
     anagrams should equal (Seq("inlets"))
   }
 
   it should "detect more anagrams" in {
-    pending
     val detector = new Anagram("allergy")
     val anagrams = detector.matches(Seq(
       "gallery", "ballerina", "regally", "clergy", "largely", "leading"
